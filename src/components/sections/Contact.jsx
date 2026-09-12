@@ -4,59 +4,20 @@ import { gymConfig } from "../../config/gymConfig";
 import {
   MapPin,
   Phone,
-  Mail,
   MessageCircle,
   Navigation,
-  Send,
   Sparkles,
-  CheckCircle2,
   Clock,
-  Check,
   Compass,
   X,
+  Award,
+  Users,
+  Dumbbell,
+  UserCheck,
 } from "lucide-react";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "Membership Inquiry",
-    message: "",
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [toastMessage, setToastMessage] = useState("");
   const [showDirections, setShowDirections] = useState(false);
-
-  const showToast = (msg) => {
-    setToastMessage(msg);
-    setTimeout(() => setToastMessage(""), 2500);
-  };
-
-  const handleCopyPhone = () => {
-    navigator.clipboard?.writeText(gymConfig.phone);
-    showToast(`Phone ${gymConfig.phone} copied to clipboard!`);
-  };
-
-  const handleCopyEmail = () => {
-    navigator.clipboard?.writeText(gymConfig.email);
-    showToast(`Email ${gymConfig.email} copied to clipboard!`);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "Membership Inquiry",
-        message: "",
-      });
-    }, 4500);
-  };
 
   return (
     <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
@@ -64,7 +25,7 @@ export default function Contact() {
       <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-extrabold uppercase tracking-[0.2em] text-[var(--primary-accent)]">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>DIRECT CONCIERGE ACCESS</span>
+          <span>DIRECT CONCIERGE & ENQUIRY Desk</span>
         </div>
 
         <h2 className="font-display font-black text-4xl sm:text-6xl text-white tracking-tight">
@@ -72,46 +33,38 @@ export default function Contact() {
         </h2>
 
         <p className="text-sm sm:text-base text-zinc-400">
-          Our team is available 7 days a week to assist with membership inquiries, facility walkthroughs, and personal coaching consultations.
+          Reach out directly via Call or WhatsApp for instant enquiries on membership options, Get Your Own Trainer services, and facility tours.
         </p>
-
-        {/* Action Toast Feedback */}
-        <AnimatePresence>
-          {toastMessage && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-semibold mt-2"
-            >
-              <Check className="w-3.5 h-3.5" />
-              <span>{toastMessage}</span>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Left Column: Direct Contact Information & Action Buttons (5 cols) */}
-        <div className="lg:col-span-5 space-y-6">
-          <div className="p-8 rounded-3xl bg-[#111115] border border-white/10 space-y-6 shadow-xl">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        {/* Left Column: Direct Contact Information & Action Buttons (6 cols) */}
+        <div className="lg:col-span-6 flex flex-col justify-between p-8 rounded-3xl bg-[#111115] border border-white/10 space-y-6 shadow-xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-60 h-60 bg-[var(--primary-accent)]/5 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="space-y-6">
             <div>
-              <div className="flex flex-wrap items-center gap-2 mb-2">
-                <span className="px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-[11px] font-bold">
+              <div className="flex flex-wrap items-center gap-2 mb-3">
+                <span className="px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-[11px] font-bold flex items-center gap-1">
+                  <Award className="w-3 h-3 text-amber-400" />
                   ★ 5.0 (41 Ratings)
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-[var(--primary-accent)]/15 border border-[var(--primary-accent)]/30 text-[var(--primary-accent)] text-[11px] font-bold">
+                <span className="px-2.5 py-0.5 rounded-full bg-[var(--primary-accent)]/15 border border-[var(--primary-accent)]/30 text-[var(--primary-accent)] text-[11px] font-bold flex items-center gap-1">
+                  <Users className="w-3 h-3" />
                   Unisex Gym
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-zinc-300 text-[11px] font-medium">
+                <span className="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-zinc-300 text-[11px] font-medium flex items-center gap-1">
+                  <Dumbbell className="w-3 h-3 text-[var(--primary-accent)]" />
                   Fitness Centres • Gyms
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-sky-500/15 border border-sky-500/30 text-sky-300 text-[11px] font-bold">
+                <span className="px-2.5 py-0.5 rounded-full bg-sky-500/15 border border-sky-500/30 text-sky-300 text-[11px] font-bold flex items-center gap-1">
+                  <UserCheck className="w-3 h-3" />
                   Get Your Own Trainer
                 </span>
               </div>
-              <h3 className="font-display font-black text-2xl text-white tracking-tight">
-                {gymConfig.gymName} Concierge Desk
+
+              <h3 className="font-display font-black text-2xl sm:text-3xl text-white tracking-tight">
+                {gymConfig.gymName}
               </h3>
               <p className="text-xs text-zinc-400 mt-1">
                 Khader Nawaz Khan Road (KNK Road), Thousand Lights, Chennai
@@ -121,7 +74,7 @@ export default function Contact() {
             <div className="space-y-4 text-sm text-zinc-300">
               <div
                 onClick={() => setShowDirections(true)}
-                className="flex items-start gap-3 cursor-pointer group"
+                className="flex items-start gap-3 cursor-pointer group p-3 rounded-2xl bg-white/5 border border-white/5 hover:border-[var(--primary-accent)]/30 transition-all"
               >
                 <MapPin className="w-5 h-5 text-[var(--primary-accent)] shrink-0 mt-1 group-hover:scale-110 transition-transform" />
                 <div>
@@ -133,217 +86,121 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-[var(--primary-accent)] shrink-0 mt-1" />
-                <div>
-                  <span className="text-xs uppercase font-bold text-zinc-400 block">Call Desk</span>
-                  <a
-                    href={`tel:${gymConfig.phone}`}
-                    className="font-medium text-white hover:text-[var(--primary-accent)] transition-colors"
-                  >
-                    {gymConfig.phoneFormatted}
-                  </a>
-                </div>
-              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <a
+                  href={`tel:${gymConfig.phone}`}
+                  className="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/5 hover:border-white/20 transition-all group"
+                >
+                  <Phone className="w-5 h-5 text-[var(--primary-accent)] shrink-0 group-hover:scale-110 transition-transform" />
+                  <div>
+                    <span className="text-[10px] uppercase font-bold text-zinc-400 block">Call Desk</span>
+                    <span className="font-bold text-white text-xs">{gymConfig.phoneFormatted}</span>
+                  </div>
+                </a>
 
-              <div className="flex items-start gap-3">
-                <MessageCircle className="w-5 h-5 text-[#25D366] shrink-0 mt-1" />
-                <div className="flex-1">
-                  <span className="text-xs uppercase font-bold text-zinc-400 block">WhatsApp Enquiry</span>
-                  <a
-                    href={gymConfig.whatsappUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="font-bold text-[#25D366] hover:underline flex items-center gap-1.5"
-                  >
-                    <span>Enquire Now WhatsApp {gymConfig.phone}</span>
-                  </a>
-                </div>
-              </div>
-
-              {/* Operating Hours Box */}
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2.5">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase text-[var(--primary-accent)] flex items-center gap-1.5">
-                    <Clock className="w-4 h-4" />
-                    Operating Hours
-                  </span>
-                  <span className="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 text-[10px] font-extrabold uppercase">
-                    Open until 10:00 pm
-                  </span>
-                </div>
-
-                <div className="space-y-1.5 text-xs text-zinc-300 pt-1 divide-y divide-white/5">
-                  <div className="flex justify-between font-semibold text-white pt-1">
-                    <span>SAT (Today)</span>
-                    <span className="text-[var(--primary-accent)]">6:00 am - 10:00 pm</span>
+                <a
+                  href={gymConfig.whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3 p-3.5 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/30 hover:border-[#25D366]/60 transition-all group"
+                >
+                  <MessageCircle className="w-5 h-5 text-[#25D366] shrink-0 group-hover:scale-110 transition-transform" />
+                  <div>
+                    <span className="text-[10px] uppercase font-bold text-[#25D366] block">WhatsApp Now</span>
+                    <span className="font-bold text-white text-xs">7947149031</span>
                   </div>
-                  <div className="flex justify-between pt-1">
-                    <span>SUN</span>
-                    <span>6:00 am - 10:00 pm</span>
-                  </div>
-                  <div className="pt-1">
-                    <div className="flex justify-between font-medium">
-                      <span>MON, 14th Sep</span>
-                      <span>6:00 am - 10:00 pm</span>
-                    </div>
-                    <span className="text-[10px] text-amber-400 font-medium block mt-0.5">
-                      (Ganesh Chaturthi) Business Hours may be affected
-                    </span>
-                  </div>
-                  <div className="flex justify-between pt-1">
-                    <span>TUE - FRI</span>
-                    <span>6:00 am - 10:00 pm</span>
-                  </div>
-                </div>
+                </a>
               </div>
             </div>
+          </div>
 
-            {/* Quick Action Buttons */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 border-t border-white/10">
-              <a
-                href={`tel:${gymConfig.phone}`}
-                className="py-3 px-2 rounded-xl font-display font-bold text-[11px] uppercase tracking-wider bg-white/10 hover:bg-white/15 text-white border border-white/15 transition-all text-center flex items-center justify-center gap-1.5 cursor-pointer"
-              >
-                <Phone className="w-3.5 h-3.5" />
-                <span>CALL DESK</span>
-              </a>
+          {/* Quick Action Buttons */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-white/10">
+            <a
+              href={`tel:${gymConfig.phone}`}
+              className="py-3.5 px-3 rounded-xl font-display font-bold text-xs uppercase tracking-wider bg-white/10 hover:bg-white/15 text-white border border-white/15 transition-all text-center flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <Phone className="w-4 h-4" />
+              <span>CALL DESK</span>
+            </a>
 
-              <a
-                href={gymConfig.whatsappUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="py-3 px-2 rounded-xl font-display font-bold text-[11px] uppercase tracking-wider bg-[#25D366] hover:bg-[#20ba5a] text-black transition-all text-center flex items-center justify-center gap-1.5 cursor-pointer shadow-md shadow-[#25D366]/30"
-              >
-                <MessageCircle className="w-3.5 h-3.5 fill-current" />
-                <span>WHATSAPP</span>
-              </a>
+            <a
+              href={gymConfig.whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="py-3.5 px-3 rounded-xl font-display font-bold text-xs uppercase tracking-wider bg-[#25D366] hover:bg-[#20ba5a] text-black transition-all text-center flex items-center justify-center gap-1.5 cursor-pointer shadow-lg shadow-[#25D366]/20 font-extrabold"
+            >
+              <MessageCircle className="w-4 h-4 fill-current" />
+              <span>WHATSAPP</span>
+            </a>
 
-              <button
-                onClick={() => setShowDirections(true)}
-                className="py-3 px-2 rounded-xl font-display font-bold text-[11px] uppercase tracking-wider bg-[var(--primary-accent)] text-black hover:opacity-90 transition-opacity text-center flex items-center justify-center gap-1.5 cursor-pointer"
-              >
-                <Navigation className="w-3.5 h-3.5" />
-                <span>DIRECTIONS</span>
-              </button>
-            </div>
+            <button
+              onClick={() => setShowDirections(true)}
+              className="py-3.5 px-3 rounded-xl font-display font-bold text-xs uppercase tracking-wider bg-[var(--primary-accent)] text-black hover:opacity-90 transition-opacity text-center flex items-center justify-center gap-1.5 cursor-pointer font-extrabold"
+            >
+              <Navigation className="w-4 h-4" />
+              <span>DIRECTIONS</span>
+            </button>
           </div>
         </div>
 
-        {/* Right Column: Interactive Inquiry Form (7 cols) */}
-        <div className="lg:col-span-7">
-          <div className="p-8 sm:p-10 rounded-3xl bg-[#111115] border border-white/10 shadow-xl space-y-6">
-            <div>
-              <h3 className="font-display font-black text-2xl text-white tracking-tight">
-                Send an Inquiry
-              </h3>
-              <p className="text-xs sm:text-sm text-zinc-400 mt-1">
-                Have specific questions about personal coaching, corporate memberships, or scheduling? Drop us a line.
-              </p>
+        {/* Right Column: Operating Hours & Schedule (6 cols) */}
+        <div className="lg:col-span-6 flex flex-col justify-between p-8 rounded-3xl bg-[#111115] border border-white/10 shadow-xl space-y-6">
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-[var(--primary-accent)]" />
+                <h3 className="font-display font-black text-xl text-white tracking-tight">
+                  OPERATING HOURS SCHEDULE
+                </h3>
+              </div>
+              <span className="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-extrabold uppercase">
+                Open until 10:00 pm
+              </span>
             </div>
 
-            {isSubmitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="p-8 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center space-y-3"
-              >
-                <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
-                <h4 className="font-display font-black text-2xl text-white">
-                  MESSAGE RECEIVED
-                </h4>
-                <p className="text-xs sm:text-sm text-zinc-300">
-                  Thank you for contacting {gymConfig.gymName}. Your inquiry has been registered in the concierge portal. Our team will connect with you shortly.
+            <p className="text-xs text-zinc-400">
+              Visit our facility anytime during operational hours for direct walk-ins and consultation with our personal coaches.
+            </p>
+
+            <div className="space-y-2.5 pt-2">
+              <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
+                <span className="text-xs font-bold text-white">SAT (Today)</span>
+                <span className="text-xs font-bold text-[var(--primary-accent)]">6:00 am - 10:00 pm</span>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
+                <span className="text-xs font-bold text-white">SUN</span>
+                <span className="text-xs font-semibold text-zinc-300">6:00 am - 10:00 pm</span>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 space-y-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-white">MON, 14th Sep</span>
+                  <span className="text-xs font-semibold text-zinc-300">6:00 am - 10:00 pm</span>
+                </div>
+                <p className="text-[11px] text-amber-400 font-medium">
+                  (Ganesh Chaturthi) Business Hours may be affected
                 </p>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-1.5">
-                      Your Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Enter your name"
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[var(--primary-accent)]"
-                    />
-                  </div>
+              </div>
 
-                  <div>
-                    <label className="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-1.5">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder={gymConfig.email}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[var(--primary-accent)]"
-                    />
-                  </div>
-                </div>
+              <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
+                <span className="text-xs font-bold text-white">TUE - FRI</span>
+                <span className="text-xs font-semibold text-zinc-300">6:00 am - 10:00 pm</span>
+              </div>
+            </div>
+          </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-1.5">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder={gymConfig.phone}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[var(--primary-accent)]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-1.5">
-                      Subject
-                    </label>
-                    <select
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-[#18181e] border border-white/10 text-white text-sm focus:outline-none focus:border-[var(--primary-accent)]"
-                    >
-                      <option value="Membership Inquiry">Membership Inquiry</option>
-                      <option value="Personal Training">Personal Training Consultation</option>
-                      <option value="Corporate Membership">Corporate Wellness</option>
-                      <option value="General Feedback">General Feedback</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-1.5">
-                    Your Message *
-                  </label>
-                  <textarea
-                    rows="4"
-                    required
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your fitness goals or questions..."
-                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[var(--primary-accent)]"
-                  />
-                </div>
-
-                <div className="pt-2">
-                  <button
-                    type="submit"
-                    className="w-full py-3.5 rounded-xl font-display font-extrabold text-xs uppercase tracking-wider bg-[var(--primary-accent)] text-black hover:opacity-90 active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-[var(--primary-accent-glow)]"
-                  >
-                    <span>SEND MESSAGE</span>
-                    <Send className="w-4 h-4" />
-                  </button>
-                </div>
-              </form>
-            )}
+          <div className="pt-4 border-t border-white/10">
+            <a
+              href={gymConfig.whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full py-4 rounded-xl font-display font-extrabold text-xs uppercase tracking-wider bg-[var(--primary-accent)] text-black hover:opacity-90 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-[var(--primary-accent-glow)]"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>ENQUIRE NOW WHATSAPP 7947149031</span>
+            </a>
           </div>
         </div>
       </div>
@@ -398,7 +255,7 @@ export default function Contact() {
                   href={gymConfig.googleMapsUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex-1 py-3 rounded-xl font-display font-bold text-xs uppercase tracking-wider bg-[var(--primary-accent)] text-black hover:opacity-90 text-center flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="flex-1 py-3 rounded-xl font-display font-bold text-xs uppercase tracking-wider bg-[var(--primary-accent)] text-black hover:opacity-90 text-center flex items-center justify-center gap-1.5 cursor-pointer font-extrabold"
                 >
                   <Navigation className="w-3.5 h-3.5" />
                   <span>OPEN GOOGLE MAPS</span>

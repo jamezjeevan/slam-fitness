@@ -6,6 +6,10 @@ import {
 } from "../../data/muscleWorkoutsData";
 import { gymConfig } from "../../config/gymConfig";
 import {
+  Flame,
+  Clock,
+  Dumbbell,
+  Sparkles,
   ArrowRight,
   CheckCircle2,
   X,
