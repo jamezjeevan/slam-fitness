@@ -1,43 +1,46 @@
 /**
- * CENTRAL CONFIGURATION FOR SKY GYM (SKY FITNESS CENTRE)
- * Thiruvottiyur High Rd, Korukkupet, Old Washermanpet, Chennai
+ * CENTRAL CONFIGURATION FOR SLAM LIFESTYLE AND FITNESS STUDIO
+ * Shafee Mohammed Road, Thousand Lights, Chennai
  */
 
 export const gymConfig = {
   // Brand Identity
-  gymName: "SKY GYM",
-  alternateName: "Sky Fitness Centre",
-  branchName: "Thiruvottiyur High Rd, Old Washermanpet",
-  gymTagline: "TRAIN • SWEAT • TRANSFORM",
-  gymHeroSubtitle: "PREMIER FITNESS CENTRE IN OLD WASHERMANPET & KORUKKUPET, CHENNAI",
-  gymHeroHeadline1: "SKY GYM.",
-  gymHeroHeadline2: "FITNESS CENTRE.",
+  gymName: "Slam Lifestyle And Fitness Studio",
+  alternateName: "Slam Fitness Studio Thousand Lights",
+  branchName: "Thousand Lights, Chennai",
+  gymTagline: "UNISEX GYM • GET YOUR OWN TRAINER • CHENNAI",
+  gymHeroSubtitle: "PREMIER 5.0★ UNISEX FITNESS STUDIO IN THOUSAND LIGHTS, CHENNAI",
+  gymHeroHeadline1: "SLAM FITNESS.",
+  gymHeroHeadline2: "THOUSAND LIGHTS.",
   gymDescription:
-    "Chennai's premier fitness destination at No.457, Sky Fitness Centre, Thiruvottiyur High Road, Korukkupet, Old Washermanpet. Equipped with top-of-the-line strength gear, certified personal trainers, weight loss & muscle building programs, and an energizing training atmosphere.",
+    "Slam Lifestyle And Fitness Studio at No. 13, New No.33, Old, West, Shafee Mohammed Road, Thousand Lights, Chennai. Rated 5.0 Stars with 41 verified ratings. Featuring state-of-the-art strength lines, certified personal coaches, Get Your Own Trainer services, and an elite unisex training environment.",
 
   // Brand Visuals / Logo
-  logoText: "SKY GYM",
-  logoShort: "SKY",
+  logoText: "SLAM FITNESS",
+  logoShort: "SLAM",
   defaultTheme: "volt", // options: 'volt', 'gold', 'crimson', 'cyan'
   accentColor: "#CCFF00",
 
   // Core Classification & Details
-  category: "Fitness Centres & Gyms",
+  category: "Fitness Centres, Gyms",
   gender: "Unisex",
-  fitnessOptions: "Gym & Fitness Centre",
-  services: "Personal Training • Weight Loss • Muscle Building",
+  fitnessOptions: "Gym",
+  services: "Get Your Own Trainer",
 
   // Contact Information
-  email: "skygymchennai@gmail.com",
-  phone: "9791148321",
-  phoneFormatted: "+91 97911 48321",
-  whatsappNumber: "9791148321",
-  whatsappFormatted: "+91 97911 48321",
-  whatsappUrl: "https://wa.me/919791148321?text=Hello%20SKY%20GYM,%20I%20would%20like%20to%20inquire%20about%20gym%20membership%20and%20free%20trial%20pass.",
-  whatsappMessage: "Hello! I would like to inquire about membership and trial passes at SKY GYM, Thiruvottiyur High Rd, Old Washermanpet.",
-  address: "No.457, Sky Fitness Centre, Thiruvottiyur High Rd, Korukkupet, Old Washermanpet, Chennai, Tamil Nadu 600021",
-  locationName: "Old Washermanpet, Chennai",
-  googleMapsUrl: "https://maps.google.com/?q=No.457+Sky+Fitness+Centre+Thiruvottiyur+High+Rd+Korukkupet+Old+Washermanpet+Chennai+Tamil+Nadu+600021",
+  email: "slamfitnesstl@gmail.com",
+  phone: "7947149031",
+  phoneFormatted: "+91 79471 49031",
+  whatsappNumber: "7947149031",
+  whatsappFormatted: "+91 79471 49031",
+  whatsappUrl:
+    "https://wa.me/917947149031?text=Hello%20Slam%20Lifestyle%20And%20Fitness%20Studio,%20I%20would%20like%20to%20enquire%20about%20membership%20and%20personal%20training.",
+  whatsappMessage:
+    "Hello! I would like to enquire about membership and Get Your Own Trainer at Slam Lifestyle And Fitness Studio, Shafee Mohammed Road, Thousand Lights, Chennai.",
+  address: "No. 13, New No.33, Old, West, Shafee Mohammed Road, Thousand Lights, Chennai-600006, Tamil Nadu",
+  locationName: "Thousand Lights, Chennai",
+  googleMapsUrl:
+    "https://maps.google.com/?q=No.+13+New+No.33+Shafee+Mohammed+Road+Thousand+Lights+Chennai+600006",
 
   // Social Links
   socials: {
@@ -45,29 +48,39 @@ export const gymConfig = {
     facebook: "https://facebook.com",
     youtube: "https://youtube.com",
     whatsapp:
-      "https://wa.me/919791148321?text=Hello%20SKY%20GYM,%20I%20would%20like%20to%20inquire%20about%20membership",
+      "https://wa.me/917947149031?text=Hello%20Slam%20Fitness,%20I%20would%20like%20to%20enquire%20about%20membership",
   },
 
   // Operating Hours & Live Status Logic
   operatingHours: {
-    display: "Mon - Sun: 05:30 AM - 10:30 PM (Open 7 Days)",
-    openTime: 5, // 5:30 AM
-    closeTime: 23, // 10:30 PM
-    closeTimeDisplay: "10:30 PM",
-    statusBadge: "Open until 10:30 pm",
+    display: "Mon - Sun: 06:00 AM - 10:00 PM (Open 7 Days)",
+    openTime: 6, // 6:00 AM
+    closeTime: 22, // 10:00 PM
+    closeTimeDisplay: "10:00 PM",
+    statusBadge: "Open until 10:00 pm",
+    holidayNotice: "(Ganesh Chaturthi) Business Hours may be affected",
     schedule: [
-      { day: "Monday - Saturday", hours: "05:30 AM - 10:30 PM", note: "Regular Hours" },
-      { day: "Sunday", hours: "06:00 AM - 08:00 PM", note: "Weekend Hours" },
+      { day: "SAT (Today)", hours: "6:00 am - 10:00 pm", note: "Open Regular Hours" },
+      { day: "SUN", hours: "6:00 am - 10:00 pm", note: "Open Regular Hours" },
+      {
+        day: "MON, 14th Sep",
+        hours: "6:00 am - 10:00 pm",
+        note: "(Ganesh Chaturthi) Business Hours may be affected",
+      },
+      { day: "TUE", hours: "6:00 am - 10:00 pm", note: "Open Regular Hours" },
+      { day: "WED", hours: "6:00 am - 10:00 pm", note: "Open Regular Hours" },
+      { day: "THU", hours: "6:00 am - 10:00 pm", note: "Open Regular Hours" },
+      { day: "FRI", hours: "6:00 am - 10:00 pm", note: "Open Regular Hours" },
     ],
   },
 
   // Ratings & Credibility
   ratings: {
-    score: "4.9",
+    score: "5.0",
     ratingStars: 5,
-    count: "150+ Ratings",
-    source: "Verified Member Reviews",
-    area: "Old Washermanpet, Chennai",
+    count: "41 Ratings",
+    source: "Verified Member Ratings",
+    area: "Thousand Lights, Chennai",
   },
 
   // Membership Pricing Tiers
@@ -76,53 +89,53 @@ export const gymConfig = {
     basic: {
       name: "BASIC",
       badge: "STARTER",
-      monthlyPrice: "1,499",
-      annualPrice: "14,999",
+      monthlyPrice: "1,999",
+      annualPrice: "19,999",
       period: "/ MONTH",
       description:
-        "Full access to our fitness floor, cardio equipment, and strength training zones on Thiruvottiyur High Rd.",
+        "Full access to our fitness floor, cardio equipment, and strength training zones in Thousand Lights.",
       features: [
-        "Full access to gym floor & free weights",
+        "Full access to gym floor & heavy weights",
         "Locker room & private shower access",
-        "Initial fitness & body composition assessment",
-        "Free high-speed member Wi-Fi",
-        "Access during all regular operational hours",
+        "Initial fitness & movement assessment",
+        "High-speed member Wi-Fi & locker facilities",
+        "Access during all operational hours (6 AM - 10 PM)",
       ],
       isPopular: false,
     },
     pro: {
       name: "PRO",
       badge: "MOST POPULAR",
-      monthlyPrice: "2,499",
-      annualPrice: "24,999",
+      monthlyPrice: "3,499",
+      annualPrice: "34,999",
       period: "/ MONTH",
       description:
         "Our flagship membership engineered for accelerated transformations with personal coaching support.",
       features: [
         "Everything in Basic tier",
-        "Unlimited group conditioning & HIIT sessions",
+        "Unlimited functional fitness & conditioning sessions",
         "2 Personal Training sessions per month",
-        "Customized nutrition guidance plan",
+        "Customized nutrition & diet guidance",
         "Steam room & recovery lounge access",
-        "Priority branch access",
+        "Priority locker & shower amenities",
       ],
       isPopular: true,
     },
     elite: {
       name: "ELITE",
       badge: "ALL-INCLUSIVE",
-      monthlyPrice: "3,999",
-      annualPrice: "39,999",
+      monthlyPrice: "5,499",
+      annualPrice: "54,999",
       period: "/ MONTH",
       description:
-        "The pinnacle fitness experience with dedicated coaching, biometric tracking, and accelerated results.",
+        "The pinnacle fitness experience with dedicated 1-on-1 personal trainer, biometric tracking, and accelerated results.",
       features: [
         "Everything in Pro tier",
-        "Dedicated 1-on-1 Personal Trainer",
-        "Weekly biometric scans & caliper tracking",
-        "Customized nutrition & macro guidance",
-        "Complimentary towel service & locker",
-        "VIP guest passes (4 passes / month)",
+        "Get Your Own Trainer — Dedicated 1-on-1 coaching",
+        "Weekly biometric body composition tracking",
+        "Customized macro nutrition & supplementation plan",
+        "Dedicated locker & towel service",
+        "Direct coach WhatsApp support 7 days a week",
       ],
       isPopular: false,
     },
@@ -130,26 +143,17 @@ export const gymConfig = {
 
   // Highlight Statistics
   stats: {
-    members: "3,500+",
+    members: "1,200+",
     membersLabel: "ACTIVE MEMBERS",
-    trainers: "12+",
+    trainers: "15+",
     trainersLabel: "CERTIFIED COACHES",
-    programs: "15+",
+    programs: "20+",
     programsLabel: "FITNESS MODULES",
-    rating: "4.9★",
-    ratingLabel: "GOOGLE RATING",
-    overallRatingText: "4.9 / 5 (150+ Reviews)",
+    rating: "5.0★",
+    ratingLabel: "41 RATINGS",
+    overallRatingText: "5.0 / 5 (41 Ratings)",
     openDays: "7 DAYS",
-    openDaysLabel: "05:30 AM - 10:30 PM",
-  },
-
-  // Free Pass Promotional Banner
-  freePassOffer: {
-    badge: "FREE TRIAL PASS",
-    heading: "YOUR FIRST WORKOUT IS FREE.",
-    subheading: "CLAIM YOUR PASS AT SKY GYM",
-    description: "Experience North Chennai's premier fitness centre at No.457, Thiruvottiyur High Road, Old Washermanpet. Try our equipment and meet our coaching team with zero commitment.",
-    cta: "CLAIM FREE PASS",
+    openDaysLabel: "06:00 AM - 10:00 PM",
   },
 };
 
@@ -167,8 +171,6 @@ export function getLiveGymStatus() {
     isOpen,
     statusText: isOpen ? "OPEN NOW" : "CLOSED NOW",
     statusBadgeColor: isOpen ? "bg-emerald-500" : "bg-rose-500",
-    detail: isOpen
-      ? `Open until 10:30 PM`
-      : `Opens at 05:30 AM`,
+    detail: isOpen ? `Open until 10:00 PM` : `Opens at 06:00 AM`,
   };
 }

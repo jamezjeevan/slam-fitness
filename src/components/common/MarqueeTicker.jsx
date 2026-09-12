@@ -3,7 +3,7 @@ import { Flame } from "lucide-react";
 export default function MarqueeTicker() {
   const tickerPhrases = [
     "SLAM LIFESTYLE AND FITNESS STUDIO",
-    "KNK ROAD • THOUSAND LIGHTS",
+    "SHAFEE MOHAMMED ROAD • THOUSAND LIGHTS",
     "5.0★ RATED (41 RATINGS)",
     "UNISEX GYM • CHENNAI",
     "GET YOUR OWN TRAINER",

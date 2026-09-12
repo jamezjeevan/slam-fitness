@@ -62,7 +62,7 @@ export default function Hero() {
             {/* Location Pill */}
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-zinc-200 text-xs font-semibold backdrop-blur-md">
               <MapPin className="w-3.5 h-3.5 text-[var(--primary-accent)]" />
-              <span>Khader Nawaz Khan Rd (KNK Rd), Thousand Lights</span>
+              <span>Shafee Mohammed Road, Thousand Lights, Chennai</span>
             </div>
 
             {/* Operating status badge */}

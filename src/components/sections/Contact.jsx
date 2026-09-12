@@ -67,7 +67,7 @@ export default function Contact() {
                 {gymConfig.gymName}
               </h3>
               <p className="text-xs text-zinc-400 mt-1">
-                Khader Nawaz Khan Road (KNK Road), Thousand Lights, Chennai
+                Shafee Mohammed Road, Thousand Lights, Chennai-600006
               </p>
             </div>
 

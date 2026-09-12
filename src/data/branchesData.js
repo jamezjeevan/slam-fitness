@@ -5,10 +5,10 @@
 
 export const branchesData = [
   {
-    id: "branch-knk",
-    name: "Slam Lifestyle And Fitness Studio - KNK Road (Flagship)",
+    id: "branch-thousand-lights",
+    name: "Slam Lifestyle And Fitness Studio - Thousand Lights (Flagship)",
     tagline: "Premier 5.0★ Unisex Fitness Studio — Thousand Lights",
-    address: "Khader Nawaz Khan Road (KNK Road), Thousand Lights, Chennai, Tamil Nadu - 600006",
+    address: "No. 13, New No.33, Old, West, Shafee Mohammed Road, Thousand Lights, Chennai-600006, Tamil Nadu",
     phone: "7947149031",
     hours: "Mon - Sun: 06:00 AM - 10:00 PM",
     image: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop",

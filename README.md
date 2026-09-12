@@ -1,11 +1,11 @@
-# Slam Lifestyle And Fitness Studio — KNK Road, Thousand Lights, Chennai
+# Slam Lifestyle And Fitness Studio — Thousand Lights, Chennai
 
-A high-performance, modern web application for **Slam Lifestyle And Fitness Studio** located on Khader Nawaz Khan Road (KNK Road), Thousand Lights, Chennai.
+A high-performance, modern web application for **Slam Lifestyle And Fitness Studio** located on Shafee Mohammed Road, Thousand Lights, Chennai.
 
 ## Overview
 - **Category:** Fitness Centres & Gyms
 - **Rating:** 5.0★ (41 Verified Ratings)
-- **Location:** Khader Nawaz Khan Road (KNK Road), Thousand Lights, Chennai, Tamil Nadu - 600006
+- **Address:** No. 13, New No.33, Old, West, Shafee Mohammed Road, Thousand Lights, Chennai-600006, Tamil Nadu
 - **Gender:** Unisex
 - **Fitness Options:** Gym & High-Performance Conditioning
 - **Services:** Get Your Own Trainer (Dedicated Personal Coaching)
